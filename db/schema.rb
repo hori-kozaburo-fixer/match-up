@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_10_29_070209) do
     t.string "nickname", limit: 100, default: "", null: false
     t.string "full_name", null: false
     t.string "full_name_kana", null: false
-    t.date "bitrh_day", null: false
+    t.date "birth_day", null: false
     t.string "self_introduction", limit: 500
     t.integer "sex", default: 0, null: false
     t.string "img_name", null: false
