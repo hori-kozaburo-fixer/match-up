@@ -87,6 +87,12 @@
       </div>
 
       <div class="form-group">
+        <label>好きなチーム</label>
+        <%= f.label :必須, class:"badge badge-danger" %><br/>
+        <%= f.collection_select(:team_id, Team.all, :id, :name,{}) %><br />
+      </div>  
+
+      <div class="form-group">
         <label>自己紹介文</label>
         <%= f.label :必須, class:"badge badge-danger" %><br/>
         <%= text_area :user, :self_introduction, maxlength: "1000", rows: "10", class:"form-control" %>
