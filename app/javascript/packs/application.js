@@ -7,6 +7,8 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("preview.js")
+require("jquery.jTinder.js")
+require("jquery.transform2d.js")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -15,9 +17,3 @@ require("preview.js")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require rails-ujs
-//= require turbolinks
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
-//= require_tree .

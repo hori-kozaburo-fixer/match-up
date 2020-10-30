@@ -1,7 +1,7 @@
 class ImgNameUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick # ここのコメントアウトを外す
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -13,9 +13,11 @@ class ImgNameUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  # リサイズのサイズを指定するコードを追加
   version :thumb do
-    process resize_to_fit:[400,400]
+    process resize_to_fit: [400, 400]
   end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -38,6 +40,8 @@ class ImgNameUploader < CarrierWave::Uploader::Base
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
+
+  # ここのコメントアウトを外す
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
