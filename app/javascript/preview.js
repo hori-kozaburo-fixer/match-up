@@ -1,4 +1,4 @@
-// if (document.URL.match(/new/) || document.URL.match(/edit/)){
+if (document.URL.match(/new/)){
   document.addEventListener('DOMContentLoaded',() => {
     const thumbNail = document.getElementById('thumbnail');
     document.getElementById('file_photo').addEventListener('change', (e) => {
@@ -9,4 +9,4 @@
       document.getElementById('userImgPreview').setAttribute('style', 'display: block');
     });
   });
-// }
+}

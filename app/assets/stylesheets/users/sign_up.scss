@@ -55,6 +55,9 @@ body {
     margin: 0 auto;
     display: none;
     text-align: center;
+    &.is-active {
+      display: block;
+    }
     &_content {
       max-width: 100px;
       margin: 10px;
