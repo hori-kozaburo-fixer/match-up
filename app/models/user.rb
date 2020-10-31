@@ -1,5 +1,10 @@
 class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
+
+  has_many :chatmessages
+  has_many :chatroomusers
+  belongs_to_active_hash :team
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -9,6 +14,5 @@ class User < ApplicationRecord
          
   enum sex:{男: 0, 女: 1}
          
-  belongs_to_active_hash :team
 end
         
