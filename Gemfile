@@ -65,6 +65,7 @@ end
 
 gem 'pry-rails'
 gem 'devise'
+gem 'devise-i18n'
 gem 'active_hash'
 gem 'mini_magick'
 gem 'carrierwave', '~> 1.0'
