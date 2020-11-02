@@ -1,4 +1,4 @@
-if (document.URL.match(/new/)){
+if (document.URL.match(/sign_up/)){
   document.addEventListener('DOMContentLoaded',() => {
     const thumbNail = document.getElementById('thumbnail');
     document.getElementById('file_photo').addEventListener('change', (e) => {
