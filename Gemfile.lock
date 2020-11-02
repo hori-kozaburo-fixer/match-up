@@ -111,6 +111,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.9.2)
+      devise (>= 4.7.1)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
@@ -369,11 +371,9 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave (~> 1.0)
   devise
-<<<<<<< Updated upstream
-=======
   devise-i18n
   dotenv-rails
->>>>>>> Stashed changes
+  devise-i18n
   factory_bot_rails
   faker
   fog-aws
