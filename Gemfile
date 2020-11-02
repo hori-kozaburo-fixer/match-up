@@ -74,3 +74,6 @@ gem 'rails-i18n'
 gem 'bootstrap', '~>4.5.0'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
+gem 'aws-sdk-s3', require: false
+gem 'fog-aws'
+gem 'dotenv-rails'
