@@ -6,10 +6,11 @@
 @import "common";
 // ページ
 @import "home";
+@import "seeks/seek";
+@import "seeks/jTinder";
+@import "seeks/matching";
+@import "seeks/chat";
 @import "users/sign_up";
 @import "users/sign_in";
 @import "users/show";
 @import "users/edit";
-@import "jTinder";
-@import "matching";
-@import "chat";

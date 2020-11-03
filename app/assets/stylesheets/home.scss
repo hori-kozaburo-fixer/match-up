@@ -1,21 +1,30 @@
-.loginPage {
-  &_contents {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    &_title {
-      margin-top: 12vh;
-    }
-    &_btn {
-      display: block;
-      max-width: 400px;
-      padding: 20px;
-      margin: 0 auto;
-      border-radius: 30px;
-      background: #fd5068;
-      color: #fff;
-    }
-  }
+.top{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav{
+  margin-right: 0;
+  align-items: center;
+}
+.nav-item{
+  margin-right: 5px;
+  border-radius: 10%;
+}
+
+.registration{
+  text-align: center;
+}
+
+.session{
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+.choice{
+  display: flex;
+  margin-bottom: 20px;;
 }
