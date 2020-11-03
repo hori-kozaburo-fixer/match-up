@@ -1,15 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-<<<<<<< Updated upstream
-  before_action :autheticate_user!
-  
-=======
-<<<<<<< Updated upstream
 
-=======
-  
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+  before_action :authenticate_user!
+
   private
   
   def configure_permitted_parameters
