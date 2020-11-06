@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_action :authenticate_user!
-
   private
   
   def configure_permitted_parameters
@@ -12,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    users_path
+    user_path(resource)
   end
 end

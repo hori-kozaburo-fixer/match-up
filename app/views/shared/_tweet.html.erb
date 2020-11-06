@@ -1,13 +1,14 @@
-<div class="card tweet-card mx-auto">
-  <div class="card-img-top">
+<div class="card" style="width: 20rem; text-align: center;">
+<div class="container">
+  <div class="card_body">
+    <h5 class="card-text" style="margin-bottom: 10px;"><%= tweet.name%></h5>
+  </div>
     <%= link_to discussion_tweet_path(tweet.id)  do %>
-      <%= image_tag tweet.image, class:"img-fluid tweet-image py-1 px-1 my-1 ", size: "150x150" %>
+      <%= image_tag tweet.image, class:"img-fluid", style:"height: 30vh; weigth: 20rem;" %>
     <% end %>
-  </div>
   <div class="card-body">
-    <h5 class="card-title"><%= tweet.name%></h5>
     <p class="card-text"><%= tweet.text %></p>
-    <p class="card-text"><%= tweet.team.name%></p>
-    <span>投稿者</span><%= link_to "#{tweet.user.nickname}", user_path(tweet.user.id) %>
+    <p>投稿者 : <%= link_to "#{tweet.user.nickname}", user_path(tweet.user.id) %></p>
   </div>
+</div>
 </div>

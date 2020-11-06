@@ -3,9 +3,11 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
 @import "common";
 // ページ
 @import "home";
+@import "other";
 @import "seeks/seek";
 @import "seeks/jTinder";
 @import "seeks/matching";
@@ -14,3 +16,7 @@
 @import "users/sign_in";
 @import "users/show";
 @import "users/edit";
+@import "tweets/chat";
+@import "tweets/show";
+@import "tweets/new";
+@import "tweets/discussion";

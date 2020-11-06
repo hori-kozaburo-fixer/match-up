@@ -1,21 +1,30 @@
 <%= render 'shared/header' %>
-  <div class="main">
-    <div class="py-5">
-      <h4><span>いくぜ！！</span>オリンピックバスケ開催</h4>
-      <p class="timer h1">あと<span id="day"></span>日<span id="hour"></span>時間<span id="min"></span>分<span id="sec"></span>秒</p>
+<div class="summary">
+  <div class="container">
+    <div class="row summary_up">
+      <div class="col summary_up_timer ">
+        <h6>🏀東京五輪バスケ開催まで🏀</h6>
+        <p class="h6"><span id="day" class="h4"></span>日<span id="hour" class="h4"></span>時間<span id="min" class="h4"></span>分<span id="sec" class="h4"></span>秒</p>
+      </div>
+      <div class="col">  
+        <%= link_to seek_home_index_path, class:"summary_up_btn" do %>
+          <div class="summary_up_btn_icon"><i class="fa fa-power-off fa-2x"></i></div>
+        <% end %>
+      </div>
     </div>
-    <div class="py-5">
-      <div class="py-3">  
-        <%= link_to 'バスケ仲間', seek_home_index_path, class:"btn btn-success rounded-circle p-2" %>
+    <div class="row summary_down">
+      <div class="col-xs-4">
+        <%= link_to chat_home_index_path, class:"summary_down_btn" do %>
+          <div class="summary_down_btn_icon"><i class="fa fa-users"></i></div>
+        <% end %>
       </div>
-      <div class="py-3">
-        <%= link_to  '掲示板',chat_home_index_path, class:"btn btn-warning rounded-circle p-2" %>
+      <div class="col-xs-4">  
+        <%= link_to other_home_index_path, class:"summary_down_btn" do %>
+          <div class="summary_down_btn_icon"><i class="fa fa-gamepad"></i></div>
+        <% end %>
       </div>
-      <div class="py-3">  
-        <%= link_to 'バスケ検定', other_home_index_path, class:"btn btn-warning rounded-circle p-2" %>
-      </div>
-      <div class="py-3">
-      <a href="https://lin.ee/pHke6nm"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+      <div class="col-xs-4">
+      <a href="https://lin.ee/pHke6nm" class="summary_down_btn_line"></a>
       </div>
     </div>
   </div>
