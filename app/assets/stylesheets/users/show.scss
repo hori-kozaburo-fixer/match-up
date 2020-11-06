@@ -1,14 +1,45 @@
 .usershowPage {
   .header {
     display: flex;
-    flex-direction: row-reverse;
-    padding-top: 10px;
-    &_logo {
+    justify-content: flex-end;
+    padding-top: 30px;
+    &_seek {
       & > a {
-        width: 40px;
+        width: 70px;
         display: block;
         & > img {
           width: 100%;
+        }
+      }
+    }
+    &_tweet {
+      
+      &_btn {
+        display: inline-block;
+        text-decoration: none;
+        background: darkorange;
+        color: #FFF;
+        width: 60px;
+        height: 60px;
+        left: 40px;
+        border-radius: 50%;
+        text-align: center;
+        overflow: hidden;
+        box-shadow: 0px 0px 0px 5px darkorange;
+        transition: .4s;
+        position: relative;
+        &:hover{
+          text-decoration: none;
+          color: white;
+          background: orange;
+          box-shadow: 0px 0px 0px 5px orange;
+        }
+        &_icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform : translate(-50%,-50%);
+          transform : translate(-50%,-50%);
         }
       }
     }
@@ -25,15 +56,34 @@
         width: 100%;
       }
     }
-
     &_name {
       text-align: center;
       margin-top: 30px;
       font-size: 30px;
     }
-
     &_selfIntroduction {
+      text-align: center;
       margin-top: 30px;
+    }
+  }
+
+  .userPost {
+    padding-top: 30px;
+    position: relative;
+    &_icon {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &_card {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      .card{  
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -41,7 +91,8 @@
     display: flex;
     justify-content: space-between;
     width: 250px;
-    margin: 20vh auto 0;
+    margin: 7vh auto 0;
+    bottom: 0;
     color:#c3c7d0;
     &_common {
       & > a {
@@ -57,7 +108,7 @@
         box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
         transition: color .5s;
         &:hover {
-          color:#fd5068;
+          color:darkorange;
         }
       }
     }

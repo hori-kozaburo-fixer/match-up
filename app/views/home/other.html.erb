@@ -1,9 +1,14 @@
 <%= render 'shared/header' %>
-<h1 class="mx-auto mt-5 h1 bg-warning">🏀バスケットボール検定🏀</h1>
-<div id="text_q" class="mx-auto my-auto h4 bg-dark text-white"></div>
-<div id="text_s" class="mx-auto my-auto"></div>
-<h2 class="mx-auto my-auto bg-dark text-white">前の問題の答え</h2>
-<div id="text_a" class="mx-auto my-auto h4"></div>
+<div class="other">
+  <div class="container"> 
+    <div class="row other_head">🏀バスケットボール検定🏀</div>
+    <div class="row other_q" id="text_q"></div>
+    <div class="row other_s" id="text_s" ></div>
+    <div class="row other_foot">前の問題の答え</div>
+    <div class="row other_a" id="text_a"></div>
+  </div>
+</div>
+<%= render 'shared/footer' %>
 
 <script type="text/javascript">
 
@@ -56,7 +61,7 @@ qa = new Array();
       s = "";
       for(n=1; n<=q_sel; n++){
         if(qa[random][n] != ""){
-          s += "<a href='javascript:answer(" + n + ")' class='choice text-warning h3'>" + n + "：" + qa[random][n] + "</a>";
+          s += "<a href='javascript:answer(" + n + ")' class='other_choice'>" + n + "：" + qa[random][n] + "</a>";
         }
       }
       document.getElementById("text_s").innerHTML = s;
@@ -77,7 +82,7 @@ qa = new Array();
       if(count<q_max){
         quiz();
       }else{
-        s = "<table border='2'><caption>成績発表</caption>";
+        s = "<table border='2'><caption style='color: darkorange; margin-top: 60px;'>8問以上正解で自慢しよう！</caption>";
         s += "<tr><th>問題</th>";
         for(n=0; n<qa.length; n++){
           s += "<th>"+(n+1)+"</th>";
@@ -91,9 +96,8 @@ qa = new Array();
         s += "</table>";
         document.getElementById("text_q").innerHTML = s;
 
-        s = "【<a href='javascript:history.back()'>前のページに戻る</a>】";
-        s += "【<a href='javascript:setReady()'>同じ問題を最初から</a>】";
-        // s += "【<a href=">次の問題に進む</a>】";
+        s = "<a href='javascript:history.back()' style='color:white; margin-top:30px; text-decoration-color: darkorange;'>トップページ</a>";
+        s += "<a href='javascript:setReady()' style='color:white; margin-top:30px; text-decoration-color: darkorange;'>最初から</a>";
         document.getElementById("text_s").innerHTML = s;
       }
     };

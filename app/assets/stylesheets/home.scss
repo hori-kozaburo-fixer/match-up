@@ -1,30 +1,101 @@
-.top{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.nav{
-  margin-right: 0;
-  align-items: center;
-}
-.nav-item{
-  margin-right: 5px;
-  border-radius: 10%;
-}
+.summary {
+  &_up {
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    &_timer{
+      text-shadow: 3px 3px 6px darkorange;
+    }
+    &_btn{
+      display: inline-block;
+      text-decoration: none;
+      background: darkorange;
+      width: 150px;
+      height: 150px;
+      line-height: 45px;
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0.9;
+      box-shadow: 0px 0px 0px 5px darkorange;
+      border: dashed 1px #FFF;
+      transition: .4s;
+      position: relative;
+      &:hover{
+        background: orange;
+        box-shadow: 0px 0px 0px 5px orange;
+      }
+      &_icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+        width: 200px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+      }
+    }
+  }
+  &_down {
+    height: 13vh;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    &_btn{
+      display: inline-block;
+      text-decoration: none;
+      background: darkorange;
+      color: #FFF;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      border-radius: 50%;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0px 0px 0px 5px darkorange;
+      border: dashed 1px #FFF;
+      transition: .4s;
+      position: relative;
+      &:hover{
+        text-decoration: none;
+        color: white;
+        background: orange;
+        box-shadow: 0px 0px 0px 5px orange;
+      }
+      &_icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+        width: 50px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+      }
+    }
+    &_btn_line{
+      background-image: url(image/line-me.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 110px 110px;
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      line-height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0px 0px 0px 10px #32CD32;
+      transition: .4s;
+      position: relative;
+      &:hover{
+        background-color:rgba(255,255,255,0.3);background-blend-mode: lighten;
 
-.registration{
-  text-align: center;
-}
-
-.session{
-  display: flex;
-  flex-flow: column;
-  text-align: center;
-}
-
-.choice{
-  display: flex;
-  margin-bottom: 20px;;
+      }
+    }
+  }
 }

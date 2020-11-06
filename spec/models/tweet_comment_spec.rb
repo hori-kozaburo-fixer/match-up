@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe ChatRoomChannel, type: :channel do
+RSpec.describe TweetComment, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

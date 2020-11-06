@@ -1,13 +1,23 @@
-<%= render 'shared/header'%>
-<div class="main">
-    <h1>参加するチャットルームを選択してください</h1>
-    <p>画像をクリックするとページが切り替わります</p>
-    <div class="d-flex align-content-around flex-wrap">
+<div class="conversation">
+<%= render 'shared/header'%>    
+  <div class="container">
+    <div class="row conversation_head">
+      <div class="conversation_head_post">
+      <%= link_to new_tweet_path, class:"conversation_head_post_btn" do %>
+        <div class="conversation_head_post_btn_icon"><i class="fa fa-edit fa-2x"></i></div>
+      <% end %>
+      </div>
+      <h4 class="col conversation_head_text">チーム選択</h4>
+    </div>
+    <div class="row conversation_teams">
       <% @teams.each do |team| %>
-        <%= link_to tweet_path(team.id) do %>
-        <%= image_tag "#{team.image}", class:"img-fluid", size:"200x200" %>
-        <% end %>
+        <div class="col-xs-4 conversation_teams_each"> 
+          <%= link_to tweet_path(team.id) do %>
+          <%= image_tag "#{team.image}", class:"img-fluid", size:"140x140" %>
+          <% end %>
+        </div>
       <% end %>
     </div>
-</div>
+  </div>
 <%= render 'shared/footer'%>
+</div>

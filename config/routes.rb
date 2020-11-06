@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers:{ registrations: 'users/registrations',sessions: 'users/sessions' }
   root  'home#index'
 
   resources :home, only:[:index] do
@@ -14,9 +14,7 @@ Rails.application.routes.draw do
     resources :tweet_comments, only: [:create]
   end
 
-  resources :items, only:[:index]
-
-  resources :users,  only:[:index, :show , :new]
+  resources :users,  only:[:index, :show]
   resources :reactions, only:[:create]
   resources :matching, only:[:index]
   resources :chat, only:[:create] 

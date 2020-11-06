@@ -1,10 +1,9 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="major_header">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkorange; border:1px solid white">
     <%= link_to 'MatchApp', root_path, class:"navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border:1px solid white;">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
       
@@ -30,10 +29,6 @@
         </li>
 
         <li class="nav-item">
-          <%=link_to "交換", items_path, class:"nav-link"%>
-        </li>
-
-        <li class="nav-item">
           <%=link_to "Bリーグ", "https://www.bleague.jp/", class:"nav-link" %>
         </li>
 
@@ -44,9 +39,6 @@
         <li class="nav-item">
         <a href="https://lin.ee/pHke6nm"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
         </li>
-
-        
-
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -54,7 +46,7 @@
       </form>
     </div>
   </nav>
-</header>
+</div>
 
 
 

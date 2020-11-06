@@ -1,9 +1,12 @@
 class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
-  has_many :chat_messages
+  has_many :tweets
   has_many :chat_room_users
+  has_many :chat_messages
   belongs_to_active_hash :team
+  has_one_attached :img_name
+
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

@@ -1,9 +1,16 @@
+<%= render 'shared/header' %>
+
 <div class='usershowPage'>
   <div class='container'>
     <header class="header">
-      <p class='header_logo'>
+      <p class='header_seek'>
         <%= link_to image_tag("icon.png"), users_path %>
       </p>
+      <div class="header_tweet">
+        <%= link_to new_tweet_path, class:"header_tweet_btn" do %>
+          <div class="header_tweet_btn_icon"><i class="fa fa-edit fa-2x"></i></div>
+        <% end %>
+      </div>
     </header>
     <div class='userInfo'>
       <div class='userInfo_img'>
@@ -12,10 +19,11 @@
       <div class='userInfo_name'><%= @user.nickname%></div>
       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
     </div>
+    </div>
     <% if current_user.id == @user.id %>
       <div class='userAction'>
         <div class="userAction_edit userAction_common">
-          <%= link_to(content_tag(:i, "", class: 'fas fa-edit fa-2x'), edit_user_registration_path) %>
+          <%= link_to(content_tag(:i, "", class: 'fa fa-street-view fa-2x '), edit_user_registration_path) %>
           <span>情報を編集</span>
         </div>
         <div class='userAction_logout userAction_common'>
@@ -24,5 +32,10 @@
         </div>
       </div>
     <% end %>
+    <div class="userPost">
+      <div class="userPost_icon"><i class="fa fa-desktop "></i> </div>
+      <div class="userPost_card">
+        <%= render partial: 'shared/tweet', collection: @user.tweets %>
+      </div>
   </div>
 </div>
