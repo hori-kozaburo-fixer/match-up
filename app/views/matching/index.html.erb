@@ -12,7 +12,7 @@
         <% @match_users.each do |user| %>
           <div class="matchingPerson">
           <div class="matchingPerson_img"><%= image_tag user.img_name.url(:thumb) %></div>
-            <div class="matchingPerson_name"><%= user.nickname %></div>
+            <%= link_to "#{user.nickname}", user_path(user.id), class:"matchingPerson_name"%>
             <%= form_tag :chat_index, method: :post do %>
               <input name="user_id" type="hidden" value="<%= user.id %>" />
               <%= submit_tag 'チャットを開く', class: "chatForm_btn" %>

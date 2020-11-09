@@ -1,19 +1,19 @@
 <div class="conversation">
 <%= render 'shared/header'%>    
   <div class="container">
-    <div class="row conversation_head">
-      <div class="conversation_head_post">
-      <%= link_to new_tweet_path, class:"conversation_head_post_btn" do %>
-        <div class="conversation_head_post_btn_icon"><i class="fa fa-edit fa-2x"></i></div>
+    <div class="row conversation_search">
+      <h5 class="col conversation_search_text">チーム毎のニュースを確認できます</h5>
+      <%= form_with(url: search_tweets_path, local: true, method: :get, class: "form-inline conversation_search_search") do |f| %>
+        <%= f.text_field :keyword, placeholder: 'ニュースを検索', class: "form-control" %>
+        <%= f.submit "検索", class:"btn btn-outline-warning" %>
       <% end %>
-      </div>
-      <h4 class="col conversation_head_text">チーム選択</h4>
     </div>
+    
     <div class="row conversation_teams">
       <% @teams.each do |team| %>
         <div class="col-xs-4 conversation_teams_each"> 
           <%= link_to tweet_path(team.id) do %>
-          <%= image_tag "#{team.image}", class:"img-fluid", size:"140x140" %>
+          <%= image_tag "#{team.image}", class:"img-fluid", size:"159x159" %>
           <% end %>
         </div>
       <% end %>

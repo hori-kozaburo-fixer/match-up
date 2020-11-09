@@ -5,12 +5,14 @@
   <div class='container'>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class:"mt-5" }) do |f| %>
       <%= devise_error_messages! %>
-
-      <label for="file_photo" class="rounded-circle userProfileImg">
-        <div class="userProfileImg_description">画像をアップロード</div>
-        <i class="fas fa-camera fa-3x"></i>
-        <%= f.file_field :img_name, id: "file_photo" %>
-      </label>
+      <div style="text-align: center;">
+        <div class="badge badge-danger" style="margin-left: 120px;">必須</div><br/>
+        <label for="file_photo" class="rounded-circle userProfileImg">
+          <div class="userProfileImg_description">画像をアップロード</div>
+          <i class="fas fa-camera fa-3x"></i>
+          <%= f.file_field :img_name, id: "file_photo" %>
+        </label>
+      </div>
 
       <div class="userImgPreview" id="userImgPreview">
         <img id="thumbnail" class="userImgPreview_content">

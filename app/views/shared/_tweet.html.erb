@@ -1,5 +1,5 @@
 <div class="card" style="width: 20rem; text-align: center;">
-<div class="container">
+<%# <div class="container"> %>
   <div class="card_body">
     <h5 class="card-text" style="margin-bottom: 10px;"><%= tweet.name%></h5>
   </div>
@@ -10,5 +10,5 @@
     <p class="card-text"><%= tweet.text %></p>
     <p>投稿者 : <%= link_to "#{tweet.user.nickname}", user_path(tweet.user.id) %></p>
   </div>
-</div>
+<%# </div> %>
 </div>

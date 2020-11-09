@@ -3,9 +3,16 @@
 <div class='usershowPage'>
   <div class='container'>
     <header class="header">
-      <p class='header_seek'>
-        <%= link_to image_tag("icon.png"), users_path %>
-      </p>
+      <div class='header_seek'>
+        <%= link_to users_path, class:"header_seek_btn" do %>
+          <div class="header_seek_btn_icon"><i class="fas fa-search fa-3x"></i></div>
+        <% end %>
+      </div>
+      <div class='header_notification'>
+        <%= link_to notifications_path, class:"header_notification_btn" do %>
+          <div class="header_notification_btn_icon"><i class="fas fa-bell fa-3x"></i></div>
+        <% end %>
+      </div>
       <div class="header_tweet">
         <%= link_to new_tweet_path, class:"header_tweet_btn" do %>
           <div class="header_tweet_btn_icon"><i class="fa fa-edit fa-2x"></i></div>
@@ -16,7 +23,14 @@
       <div class='userInfo_img'>
         <%= image_tag @user.img_name.url(:thumb) %>
       </div>
-      <div class='userInfo_name'><%= @user.nickname%></div>
+      <div class='userInfo_name'><%= @user.nickname%>
+        <% if @user.sex == 0 %>
+          <i class="fas fa-mars" style="color: blue;"></i>
+          <% else %>
+          <i class="fas fa-venus" style="color: red;"></i>
+        <% end %>
+      </div>
+      <div class='userInfo_birth_day'><i class="fas fa-birthday-cake userInfo_birth_day_icon"></i><%= @user.birth_day%><%= image_tag "#{@user.team.image}", class:"img-fluid userInfo_birth_day_team", size:"65x65" %></div>
       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
     </div>
     </div>

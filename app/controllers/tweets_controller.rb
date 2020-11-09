@@ -31,7 +31,7 @@ class TweetsController < ApplicationController
       @tweet.save
       redirect_to tweet_path(@tweet.team_id)
     else
-      render :edite
+      render :discussion
     end
   end
 
@@ -39,12 +39,17 @@ class TweetsController < ApplicationController
   def destroy 
     @tweet = Tweet.find(params[:id])
     @tweet.destroy
+    redirect_to chat_home_index_path
   end
   
   def discussion
     @tweet = Tweet.find(params[:id])
     @tweet_comment = TweetComment.new
     @tweet_comments = TweetComment.where(tweet_id: @tweet.id)
+  end
+
+  def search
+    @tweets = Tweet.search(params[:keyword])
   end
 
   private

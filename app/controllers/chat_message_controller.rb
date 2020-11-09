@@ -8,7 +8,6 @@ class ChatMessageController < ApplicationController
   end
 
   def create
-    binding.pry
     @chat_message = ChatMessage.new(text: params[:message][:text])
   end
 end

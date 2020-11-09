@@ -34,6 +34,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~>4.0.0'
   gem 'faker'
+  gem 'forgery'
   gem 'forgery_ja'
 end
 
@@ -66,6 +67,7 @@ end
 gem 'pry-rails'
 gem 'devise'
 gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'active_hash'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
@@ -77,3 +79,6 @@ gem 'font-awesome-sass'
 gem 'aws-sdk-s3', require: false
 gem 'fog-aws'
 gem 'dotenv-rails'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'

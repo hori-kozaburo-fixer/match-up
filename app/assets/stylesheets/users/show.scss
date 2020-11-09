@@ -1,3 +1,11 @@
+@keyframes bell {
+  0% {transform: translate(0px, 0px) rotateZ(0deg)}
+  25% {transform: translate(1px, 1px) rotateZ(1deg)}
+  50% {transform: translate(0px, 1px) rotateZ(0deg)}
+  75% {transform: translate(1px, 0px) rotateZ(-1deg)}
+  100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
 .usershowPage {
   .header {
     display: flex;
@@ -5,23 +13,20 @@
     padding-top: 30px;
     &_seek {
       & > a {
+        color: black;
         width: 70px;
         display: block;
-        & > img {
-          width: 100%;
-        }
       }
     }
     &_tweet {
-      
       &_btn {
         display: inline-block;
         text-decoration: none;
         background: darkorange;
         color: #FFF;
-        width: 60px;
-        height: 60px;
-        left: 40px;
+        width: 45px;
+        height: 45px;
+        left: 42px;
         border-radius: 50%;
         text-align: center;
         overflow: hidden;
@@ -36,6 +41,26 @@
         }
         &_icon {
           position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform : translate(-50%,-50%);
+          transform : translate(-50%,-50%);
+        }
+      }
+    }
+    &_notification {
+      &_btn {
+        position: relative;
+        top: 10px;
+        padding-left: 30px;
+        margin-left: 20px;
+        &:hover {
+          display: inline-block;
+          animation: bell .3s  infinite;
+        }
+        &_icon {
+          position: absolute;
+          color: black;
           top: 50%;
           left: 50%;
           -webkit-transform : translate(-50%,-50%);
@@ -60,6 +85,17 @@
       text-align: center;
       margin-top: 30px;
       font-size: 30px;
+    }
+    &_birth_day {
+      text-align: center;
+      margin: auto;
+      &_icon {
+        margin-right: 20px;
+        color: pink;
+      }
+      &_team{
+        margin-left: 50px;
+      }
     }
     &_selfIntroduction {
       text-align: center;

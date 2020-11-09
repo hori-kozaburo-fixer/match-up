@@ -1,19 +1,33 @@
 .summary {
+  background-image: url(image/top-back.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:rgba(255,255,255,0);background-blend-mode: lighten;
+  &_timer{
+    padding-top: 38px;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkorange;
+  }
   &_up {
-    height: 70vh;
+    height: 56vh;
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    &_timer{
-      text-shadow: 3px 3px 6px darkorange;
+    &_title{
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 5px 5px 5px white;
     }
     &_btn{
       display: inline-block;
       text-decoration: none;
       background: darkorange;
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
+      top: -100px;
       line-height: 45px;
       border-radius: 50%;
       overflow: hidden;
@@ -78,14 +92,14 @@
       }
     }
     &_btn_line{
-      background-image: url(image/line-me.png);
+      background-image: url(image/line.png);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 110px 110px;
       display: inline-block;
-      width: 70px;
-      height: 70px;
-      line-height: 40px;
+      width: 65px;
+      height: 65px;
+      line-height: 38px;
       border-radius: 50%;
       text-align: center;
       overflow: hidden;

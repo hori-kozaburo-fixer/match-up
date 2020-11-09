@@ -1,21 +1,25 @@
 <%= render 'shared/header' %>
 <div class="summary">
   <div class="container">
+    <div class="col summary_timer ">
+        <h4>東京五輪バスケ開催まで</h4>
+        <p class="h4"><span id="day" class="h2"></span>日<span id="hour" class="h2"></span>時間<span id="min" class="h2"></span>分<span id="sec" class="h2"></span>秒</p>
+    </div>
     <div class="row summary_up">
-      <div class="col summary_up_timer ">
-        <h6>🏀東京五輪バスケ開催まで🏀</h6>
-        <p class="h6"><span id="day" class="h4"></span>日<span id="hour" class="h4"></span>時間<span id="min" class="h4"></span>分<span id="sec" class="h4"></span>秒</p>
+      <div class="col summary_up_title">
+        <h4>MatchAppへようこそ</p>
+        <h4><i class="fas fa-user-friends" style="color: darkoragen;"></i>仲間を集めよう</p>
       </div>
-      <div class="col">  
+      <div class="col summary_up_search">
         <%= link_to seek_home_index_path, class:"summary_up_btn" do %>
-          <div class="summary_up_btn_icon"><i class="fa fa-power-off fa-2x"></i></div>
+          <div class="summary_up_btn_icon">はじめる</div>
         <% end %>
       </div>
     </div>
     <div class="row summary_down">
       <div class="col-xs-4">
         <%= link_to chat_home_index_path, class:"summary_down_btn" do %>
-          <div class="summary_down_btn_icon"><i class="fa fa-users"></i></div>
+          <div class="summary_down_btn_icon"><i class="fas fa-basketball-ball"></i></div>
         <% end %>
       </div>
       <div class="col-xs-4">  
